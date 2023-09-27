@@ -22,7 +22,6 @@ function fibonacciSequence(numberOfElements: number) {
     const nextNumber = sequence[i - 1] + sequence[i - 2];
     sequence.push(nextNumber);
   }
-
   return sequence;
 }
 
