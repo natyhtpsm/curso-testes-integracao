@@ -1,9 +1,13 @@
 import supertest from "supertest";
-
 import app from "./../src/app";
+import prisma from "../src/database";
 import { ReservationInput } from "../src/repository";
 
 const api = supertest(app);
+
+beforeAll(async () => {
+  await prisma.reservation.deleteMany();
+});
 
 describe("API test", () => {
   it("should create a reservation", async () => {
