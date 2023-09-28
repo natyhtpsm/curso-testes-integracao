@@ -3,6 +3,7 @@ import supertest from "supertest";
 import app from "./../src/app";
 import prisma from "../src/database";
 import { UserInput } from "../src/repository";
+import { faker } from '@faker-js/faker';
 
 const api = supertest(app);
 
